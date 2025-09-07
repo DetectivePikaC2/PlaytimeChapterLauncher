@@ -1,0 +1,97 @@
+[gd_scene load_steps=14 format=3 uid="uid://bxqd3hsrqghfe"]
+
+[ext_resource type="Script" uid="uid://ct15uv86iqj1f" path="res://chapter_button.gd" id="1_vnonp"]
+[ext_resource type="Material" uid="uid://d1gl7iioslbqk" path="res://uiElements/chapter_GRAYSCALE.tres" id="2_ot54y"]
+[ext_resource type="Texture2D" uid="uid://bmnkx8rtbyf4b" path="res://IconTextures/Test/Ch1.png" id="2_vnonp"]
+[ext_resource type="Texture2D" uid="uid://d1eqn4x5vnnte" path="res://uiElements/Frame.png" id="3_ot54y"]
+[ext_resource type="FontFile" uid="uid://bfcn04bp78yv6" path="res://uiElements/VCR_OSD_MONO_1.001.ttf" id="4_spygo"]
+[ext_resource type="AudioStream" uid="uid://13323jc8x6a5" path="res://uiElements/SW_UI_Button_Hover_Back.wav" id="6_ot54y"]
+[ext_resource type="AudioStream" uid="uid://cfoow2f5wjhfo" path="res://uiElements/SW_UI_Button_BackSelect.wav" id="7_spygo"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_tfem4"]
+_surfaces = [{
+"2d": true,
+"aabb": AABB(-336, -670, 0, 672, 1340, 0),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 0, 0),
+"format": 34393296913,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 2, 0, 2, 0, 1, 0, 0, 0),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 168, 195, 0, 128, 39, 196, 0, 0, 168, 195, 0, 128, 39, 68, 0, 0, 168, 67, 0, 128, 39, 68, 0, 0, 168, 67, 0, 128, 39, 196)
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vnonp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ot54y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_spygo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q7ygn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0f5v8"]
+
+[node name="ChapterButton" type="Node2D"]
+script = ExtResource("1_vnonp")
+
+[node name="CoverImage" type="MeshInstance2D" parent="."]
+material = ExtResource("2_ot54y")
+position = Vector2(3.2399979, -1.5258789e-05)
+scale = Vector2(0.34, 0.31492534)
+mesh = SubResource("ArrayMesh_tfem4")
+texture = ExtResource("2_vnonp")
+
+[node name="Frame" type="Sprite2D" parent="."]
+position = Vector2(3.2399974, -1.5258789e-05)
+scale = Vector2(0.34, 0.31492534)
+texture = ExtResource("3_ot54y")
+
+[node name="Title" type="Label" parent="."]
+offset_left = -110.76
+offset_top = 145.99998
+offset_right = 117.24
+offset_bottom = 210.99998
+theme_override_fonts/font = ExtResource("4_spygo")
+theme_override_font_sizes/font_size = 18
+text = "\"A TIGHT SQUEEZE\""
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Chapter" type="Label" parent="."]
+offset_left = -110.76
+offset_top = 122.999985
+offset_right = 117.24
+offset_bottom = 152.99998
+theme_override_fonts/font = ExtResource("4_spygo")
+theme_override_font_sizes/font_size = 21
+text = "CHAPTER 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = -110.76
+offset_top = -210.00002
+offset_right = 117.24
+offset_bottom = 210.99998
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vnonp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ot54y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_spygo")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_q7ygn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0f5v8")
+flat = true
+
+[node name="Hover" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("6_ot54y")
+
+[node name="Press" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("7_spygo")
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,417 @@
+[gd_scene load_steps=24 format=3 uid="uid://b2q078v0tehcw"]
+
+[ext_resource type="FontFile" uid="uid://bfcn04bp78yv6" path="res://uiElements/VCR_OSD_MONO_1.001.ttf" id="1_lijnh"]
+[ext_resource type="Script" uid="uid://cqx605j2gb0hb" path="res://chapter_select.gd" id="1_nsewt"]
+[ext_resource type="Material" uid="uid://dx2mmlmd517v2" path="res://uiElements/chapter_selectbg.tres" id="2_fugb7"]
+[ext_resource type="Script" uid="uid://o74lyjr8tn30" path="res://chapter_selectLoader.gd" id="3_rhu6q"]
+[ext_resource type="Script" uid="uid://bmf83v67w16hy" path="res://chapterdata.gd" id="4_y6bkw"]
+[ext_resource type="Texture2D" uid="uid://bmnkx8rtbyf4b" path="res://IconTextures/Test/Ch1.png" id="6_tfem4"]
+[ext_resource type="Texture2D" uid="uid://c4rd8uhp8vmpm" path="res://uiElements/Brackets.png" id="7_3sxg0"]
+[ext_resource type="Texture2D" uid="uid://c38jl4fw7cs64" path="res://IconTextures/Test/Ch2.png" id="7_yb2bx"]
+[ext_resource type="Texture2D" uid="uid://2p4djfs6a3l5" path="res://IconTextures/Test/Ch3_1.png" id="8_fugb7"]
+[ext_resource type="Texture2D" uid="uid://d0aoo60lk4bvr" path="res://IconTextures/Test/ch4.png" id="9_g1qv3"]
+
+[sub_resource type="Resource" id="Resource_66gmv"]
+script = ExtResource("4_y6bkw")
+chapter_title = "A Tight Squeeze"
+chapter_cover_image = ExtResource("6_tfem4")
+metadata/_custom_type_script = "uid://bmf83v67w16hy"
+
+[sub_resource type="Resource" id="Resource_3sxg0"]
+script = ExtResource("4_y6bkw")
+chapter_title = "Fly In A Web"
+chapter_cover_image = ExtResource("7_yb2bx")
+metadata/_custom_type_script = "uid://bmf83v67w16hy"
+
+[sub_resource type="Resource" id="Resource_tfem4"]
+script = ExtResource("4_y6bkw")
+chapter_title = "Deep Sleep"
+chapter_cover_image = ExtResource("8_fugb7")
+metadata/_custom_type_script = "uid://bmf83v67w16hy"
+
+[sub_resource type="Resource" id="Resource_2b8pt"]
+script = ExtResource("4_y6bkw")
+chapter_title = "Safe Haven"
+chapter_cover_image = ExtResource("9_g1qv3")
+metadata/_custom_type_script = "uid://bmf83v67w16hy"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yb2bx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yb2bx"]
+bg_color = Color(0.29586652, 0.29586652, 0.29586637, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g1qv3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_34k8x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_arrwa"]
+
+[sub_resource type="Animation" id="Animation_lijnh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logo:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Logo:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ChapterSelect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ChapterSelect:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ColorRect:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ColorRect4:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ColorRect4:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ChapterSelect/Label2:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_yb2bx"]
+resource_name = "failed"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ChapterSelect/Label2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 1.2333333, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5mia1"]
+resource_name = "logo"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logo:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4666667, 3.4666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Logo:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4666667, 1.4666667, 2.4666667, 3.4666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ChapterSelect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.8666668, 3.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ChapterSelect:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3.9, 4.4666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3.9),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"ready_for_load"
+}]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ColorRect:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.5, 3.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ColorRect:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(3.9, 4.4666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ColorRect4:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.4666667, 3.9, 4.4666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ColorRect4:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.4666667, 3.9, 4.4666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lijnh"]
+_data = {
+&"RESET": SubResource("Animation_lijnh"),
+&"failed": SubResource("Animation_yb2bx"),
+&"logo": SubResource("Animation_5mia1")
+}
+
+[node name="ChapterSelector" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nsewt")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -221.0
+offset_top = -173.0
+offset_right = 1373.0
+offset_bottom = 821.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+material = ExtResource("2_fugb7")
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -68.0
+offset_top = 88.0
+offset_right = 1220.0
+offset_bottom = 545.0
+color = Color(0, 0, 0, 1)
+
+[node name="Logo" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="Logo"]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("1_lijnh")
+theme_override_font_sizes/font_size = 36
+text = "Your Logo Here"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChapterSelect" type="Node2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("3_rhu6q")
+chapters = Array[ExtResource("4_y6bkw")]([SubResource("Resource_66gmv"), SubResource("Resource_3sxg0"), SubResource("Resource_tfem4"), SubResource("Resource_2b8pt")])
+
+[node name="Label" type="Label" parent="ChapterSelect"]
+offset_top = 3.0
+offset_right = 1152.0
+offset_bottom = 117.0
+theme_override_fonts/font = ExtResource("1_lijnh")
+theme_override_font_sizes/font_size = 39
+text = "SELECT CHAPTER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="ChapterSelect"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 385.0
+offset_top = 540.0
+offset_right = 767.0
+offset_bottom = 577.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_lijnh")
+theme_override_font_sizes/font_size = 16
+text = "CHAPTER UNINSTALLED OR UNRELEASED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Brackets2" type="Sprite2D" parent="ChapterSelect"]
+position = Vector2(751, 60)
+rotation = 3.1415927
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("7_3sxg0")
+
+[node name="Brackets3" type="Sprite2D" parent="ChapterSelect"]
+position = Vector2(403, 60)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("7_3sxg0")
+
+[node name="ExitButton" type="Button" parent="ChapterSelect"]
+offset_left = 543.0
+offset_top = 580.0
+offset_right = 609.0
+offset_bottom = 609.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.69803923, 0.69803923, 0.69803923, 1)
+theme_override_fonts/font = ExtResource("1_lijnh")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yb2bx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yb2bx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g1qv3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_34k8x")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_arrwa")
+text = "EXIT"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_lijnh")
+}
+autoplay = "logo"
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -221.0
+offset_top = -173.0
+offset_right = 1373.0
+offset_bottom = 821.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="ChapterSelect/ExitButton" to="." method="_on_exit_button_pressed"]
