@@ -13,6 +13,8 @@ config_version=5
 config/name="PlaytimeLauncher"
 run/main_scene="uid://b2q078v0tehcw"
 config/features=PackedStringArray("4.5", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
 config/icon="uid://b1ovyklqeb2hk"
 
 [display]
